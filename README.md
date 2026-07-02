@@ -1,6 +1,10 @@
-# IV Clinic Evaluator
+# IV Therapy Clinic Valuation Evaluator
 
-A small Python CLI for evaluating IV therapy clinic opportunities in a local area.
+[![GitHub stars](https://img.shields.io/github/stars/itsgreat2beme/ClinicValuationEvaluator?style=social)](https://github.com/itsgreat2beme/ClinicValuationEvaluator/stargazers)
+[![Python](https://img.shields.io/badge/python-3.9%2B-blue)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
+A small Python CLI for evaluating IV therapy clinic opportunities in a local area. Use it to compare neighborhoods, existing clinics, or possible expansion markets with a simple weighted scoring model.
 
 It can:
 
@@ -8,6 +12,8 @@ It can:
 - Score market opportunity using demand, competition, review quality, price, and accessibility signals.
 - Export a ranked CSV report.
 - Optionally fetch nearby clinics from Google Places if you provide an API key.
+
+If this helps your clinic research, please star the repo so other builders can find it.
 
 ## Quick Start
 
@@ -20,6 +26,14 @@ python -m iv_clinic_evaluator analyze \
   --input data/sample_clinics.csv \
   --output report.csv
 ```
+
+Example output:
+
+| Rank | Clinic | Area | Opportunity Score |
+| --- | --- | --- | --- |
+| 1 | Suburban Hydration Studio | North Suburbs | 80.32 |
+| 2 | Athlete Recovery Clinic | Westside | 75.72 |
+| 3 | Budget Hydration Clinic | Eastside | 68.27 |
 
 ## CSV Format
 
@@ -65,3 +79,30 @@ The default formula rewards:
 - Prices that are not far outside the local median.
 
 This is a directional business-screening tool, not medical, legal, or financial advice.
+
+## Good GitHub Topics
+
+Add these topics on GitHub to help people discover the project:
+
+```text
+healthcare, clinic, valuation, market-analysis, python, small-business, location-analysis, iv-therapy
+```
+
+## Share Copy
+
+Short post you can use on LinkedIn, X, Reddit, or founder communities:
+
+```text
+I built a small open-source Python tool for evaluating IV therapy clinic opportunities by area. It ranks locations using demand, competition, reviews, pricing, and accessibility signals.
+
+Repo: https://github.com/itsgreat2beme/ClinicValuationEvaluator
+```
+
+## Contributing
+
+Ideas, bug reports, and pull requests are welcome. Useful next improvements include:
+
+- More data source connectors.
+- A Streamlit dashboard.
+- Census or local demographic imports.
+- Exportable charts for investor or operator reports.
